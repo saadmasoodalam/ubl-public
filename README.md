@@ -1,7 +1,13 @@
 # Universal Binary Language — Public Review
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23845298.svg)](https://doi.org/10.5281/zenodo.23845298)
+
 **Author / Architect:** Saad Masood  
+**ORCID:** https://orcid.org/0009-0005-0796-7198  
 **Kernel baseline:** UBL Kernel v1.0.0  
+**Public review release:** v1.0.0-review  
+**Version DOI:** https://doi.org/10.5281/zenodo.23845298  
+**Concept DOI (all versions):** https://doi.org/10.5281/zenodo.23845297  
 **Status:** Frozen kernel contract; public technical review requested
 
 This repository contains a limited public review package for the **Universal Binary Language (UBL)** kernel. The primary implementation repository remains private.
@@ -15,10 +21,21 @@ UBL v1.0 defines an 8-bit U-Atom with a seven-bit payload and a Bit-0 memory/per
 - [BENCHMARKS.md](BENCHMARKS.md) — published wire-density benchmark evidence
 - [REVIEW.md](REVIEW.md) — questions for external technical reviewers
 - [DISCLOSURE.md](DISCLOSURE.md) — public/private boundary
+- [CITATION.cff](CITATION.cff) — machine-readable citation metadata
 
 ## Public whitepaper
 
 https://dadastore.co/research/papers/ubl-kernel-v1.html
+
+## Citation
+
+For this exact archived public-review baseline, cite:
+
+> Masood, Saad. *UBL Kernel v1.0 — Public Review and Evidence Baseline*. Version v1.0.0-review, 2026. Zenodo. https://doi.org/10.5281/zenodo.23845298
+
+For references intended to follow the project across future versions, use the concept DOI:
+
+https://doi.org/10.5281/zenodo.23845297
 
 ## Feedback requested
 
