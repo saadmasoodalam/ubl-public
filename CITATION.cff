@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: "UBL Kernel v1.0 — Public Review and Evidence Baseline"
+message: "If you use or review this public UBL baseline, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: Masood
+    given-names: Saad
+    orcid: "https://orcid.org/0009-0005-0796-7198"
+version: "v1.0.0-review"
+date-released: 2026-10-31
+doi: "10.5281/zenodo.23845298"
+repository-code: "https://github.com/saadmasoodalam/ubl-public"
+url: "https://dadastore.co/research/papers/ubl-kernel-v1.html"
+abstract: >-
+  Public technical-review and evidence baseline for the Universal Binary Language
+  (UBL) Kernel v1.0, including the frozen kernel contract, verification scope,
+  wire-density benchmark, review questions, and public disclosure boundary.
+keywords:
+  - universal binary language
+  - formal verification
+  - embedded systems
+  - fpga
+  - protocol design
+  - state machines
+  - event sourcing
+  - distributed systems
+  - systems architecture
+license: "CC-BY-4.0"
