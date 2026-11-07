@@ -19,6 +19,7 @@ UBL v1.0 defines an 8-bit U-Atom with a seven-bit payload and a Bit-0 memory/per
 - [KERNEL-CONTRACT.md](KERNEL-CONTRACT.md) — frozen v1.0 primitive laws
 - [VERIFICATION.md](VERIFICATION.md) — formal-verification and cross-runtime validation scope
 - [BENCHMARKS.md](BENCHMARKS.md) — published wire-density benchmark evidence
+- [HARDWARE-V4.md](HARDWARE-V4.md) — November 2026 FPGA simulation, resource mapping and estimated timing (limits stated)
 - [REVIEW.md](REVIEW.md) — questions for external technical reviewers
 - [DISCLOSURE.md](DISCLOSURE.md) — public/private boundary
 - [CITATION.cff](CITATION.cff) — machine-readable citation metadata
