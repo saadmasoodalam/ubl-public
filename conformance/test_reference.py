@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import hashlib
+import subprocess
+import sys
 import unittest
 
 from conformance.reference import ContractReference, CONTROLS, split_atom
@@ -10,6 +12,23 @@ ZERO_SEED = bytes(32)
 
 
 class KernelPublicContractSubset(unittest.TestCase):
+    def test_occurrence_overflow_rejected_without_changing_state(self):
+        ref = ContractReference(ZERO_SEED)
+        ref.occurrences = 2**64 - 1
+        before = ref.snapshot()
+        with self.assertRaises(OverflowError):
+            ref.feed(0x21)
+        self.assertEqual(ref.snapshot(), before)
+
+    def test_cli_rejects_invalid_hex_and_seed_without_traceback(self):
+        for args in (['--atoms', 'gg'], ['--atoms', '21', '--eventid-seed', '00']):
+            with self.subTest(args=args):
+                run = subprocess.run([sys.executable, '-m', 'conformance.reference', *args],
+                                     capture_output=True, text=True)
+                self.assertEqual(run.returncode, 2)
+                self.assertEqual(run.stdout, '')
+                self.assertNotIn('Traceback', run.stderr)
+
     def test_all_256_bit_splits(self):
         for payload in range(128):
             for memory in (0, 1):

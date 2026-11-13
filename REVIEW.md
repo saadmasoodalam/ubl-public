@@ -38,3 +38,9 @@ If you know of a protocol, ISA, event system, tagged architecture, state machine
 ## How to respond
 
 A useful review can be as small as one concrete counterexample. Please identify the relevant rule and explain the failure mode or prior-art relationship.
+
+You can now run the [public reference](conformance/README.md), edit its temperature
+example or add a test. For a reproducible issue, include the exact command or
+atom sequence, expected result, observed result and Python version. Identify
+whether the issue concerns the published contract or a demonstration choice in
+[the gap register](conformance/GAPS.md).

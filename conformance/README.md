@@ -1,4 +1,4 @@
-# UBL v11 — Independent public-contract reference (partial)
+# UBL — Independent public-contract reference (partial)
 
 This is a **small runnable illustration of the published `KERNEL-CONTRACT.md`**, written from the public document only. It does **not** import the private kernel, reproduce its hardware implementation, or expose the private test infrastructure.
 
@@ -7,11 +7,23 @@ This is a **small runnable illustration of the published `KERNEL-CONTRACT.md`**,
 Requires Python 3.11+ and only the standard library:
 
 ```sh
+python -m conformance.demo
+python -m conformance.demo --readings 69 70 71 --threshold 71
 python -m unittest discover -s conformance -p 'test_*.py' -v
 python -m conformance.reference --atoms '21 22 ff 21'
 ```
 
-The CLI prints each occurrence's final EventID head, semantic ledger, volatile state, and any unresolved controls. Its default `E_0` is **32 zero bytes for illustration**, *not* an official kernel seed. Supply your own with `--eventid-seed` (64 hexadecimal characters).
+The temperature example is ordinary Python application code over this reference:
+every reading updates transient state, while readings at/above the chosen
+threshold also append an alarm. Repeated alarms are retained, reserved literal
+values are escaped, and the default ledger is `[70,75,75,125]`. Edit
+[demo.py](demo.py) or its `--readings`/`--threshold` arguments; `--json` prints a
+structured trace. It emits no transport frame and measures no clocks or speed.
+
+The raw-atom CLI prints the final EventID head, semantic ledger, volatile state,
+actions for all occurrences, and any unresolved controls. Its default `E_0` is
+**32 zero bytes for illustration**, *not* an official kernel seed. Supply your
+own with `--eventid-seed` (64 hexadecimal characters).
 
 ## What is independently checked
 
@@ -24,7 +36,11 @@ The CLI prints each occurrence's final EventID head, semantic ledger, volatile s
 - Repeated identical input atoms get different occurrence-based EventIDs.
 - A known fixed hash trace checks `SHA256(previous32 || atom1 || uint64_be(index))`.
 
-The 12 `unittest` test methods include exhaustive loops; they are **not 12 independent mathematical proofs**. The tests are only an example set that outsiders can inspect, alter, and extend.
+The test methods include exhaustive bit-split loops, independent known hash
+vectors, editable-example histories and CLI error checks. Test counts are
+reported by the command and public CI; they are not independent mathematical
+proofs or the private cross-runtime conformance suite. Outsiders can inspect,
+alter and extend these tests.
 
 ## Important limits
 

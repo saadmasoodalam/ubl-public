@@ -16,6 +16,14 @@ The following may be discussed and cited publicly:
 - published cross-runtime validation claims
 - the published 4-event wire-density benchmark
 - public whitepapers and review questions
+- the independent, partial Python reference and editable example in
+  `conformance/`, derived only from the public contract
+
+The runnable reference is explanatory, not normative. Its demonstration choices
+and unspecified behavior are listed in [conformance/GAPS.md](conformance/GAPS.md).
+It does not disclose the private runtime, compiler, RTL, private vectors or
+unreleased mechanisms. Adding this example does not change the frozen contract
+or grant access to withheld material.
 
 ## Private / withheld
 

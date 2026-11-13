@@ -55,9 +55,9 @@ class ContractReference:
 
     def feed(self, atom: int) -> str:
         payload, memory = split_atom(atom)
-        self.occurrences += 1
-        if self.occurrences >= 2**64:
+        if self.occurrences == 2**64 - 1:
             raise OverflowError("uint64_be(n) no longer represents occurrence")
+        self.occurrences += 1
         self.eventid = hashlib.sha256(
             self.eventid + bytes([atom]) + self.occurrences.to_bytes(8, "big")
         ).digest()
@@ -118,11 +118,11 @@ def main() -> None:
     try:
         stream = bytes.fromhex(args.atoms)
         seed = bytes.fromhex(args.eventid_seed)
-    except ValueError as e:
-        parser.error(f"invalid hexadecimal input: {e}")
-    model = ContractReference(seed)
-    for atom in stream:
-        model.feed(atom)
+        model = ContractReference(seed)
+        for atom in stream:
+            model.feed(atom)
+    except (ValueError, OverflowError) as e:
+        parser.error(str(e))
     print(json.dumps(model.snapshot(), indent=2, sort_keys=True))
 
 

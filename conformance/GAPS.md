@@ -1,4 +1,4 @@
-# Public contract gaps recorded during v11
+# Public contract gaps recorded by the executable reference
 
 The tests intentionally refuse to invent normative rules not present in [`KERNEL-CONTRACT.md`](../KERNEL-CONTRACT.md).
 

@@ -2,13 +2,9 @@ name: Public UBL Contract Reference Tests
 
 on:
   push:
-    paths:
-      - 'conformance/**'
-      - '.github/workflows/public-conformance.yml'
+    branches: [main]
   pull_request:
-    paths:
-      - 'conformance/**'
-      - '.github/workflows/public-conformance.yml'
+    branches: [main]
 
 permissions:
   contents: read
@@ -17,12 +13,19 @@ jobs:
   public-reference-tests:
     runs-on: ubuntu-latest
     timeout-minutes: 3
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: ${{ matrix.python }}
       - name: Execute independent public-contract reference tests
         run: python -m unittest discover -s conformance -p 'test_*.py' -v
+      - name: Run the public quick-start examples
+        run: |
+          python -m conformance.demo
+          python -m conformance.reference --atoms '21 22 ff 21'
