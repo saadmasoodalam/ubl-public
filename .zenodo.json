@@ -1,0 +1,37 @@
+{
+  "title": "UBL Kernel v1.0 — Runnable Public-Contract Reference",
+  "version": "public-reference-2026-11-14",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "publication_date": "2026-11-14",
+  "creators": [
+    {
+      "name": "Masood, Saad",
+      "orcid": "0009-0005-0796-7198",
+      "affiliation": "theDaDaist"
+    }
+  ],
+  "description": "<p>Runnable, independent Python illustration of the published Universal Binary Language Kernel v1.0 contract. This archive includes an editable synthetic temperature example, a raw-atom CLI, 20 standard-library tests, the frozen public contract and review documents. It is an archive update, not a new kernel version or a release of the private compiler/RTL.</p><p>Requires Python 3.11+ with no additional packages. After extracting the ZIP, open a terminal in its folder and run <code>python -m conformance.demo</code>. Run the tests with <code>python -m unittest discover -s conformance -p 'test_*.py' -v</code>. Change readings with <code>python -m conformance.demo --readings 69 70 71 --threshold 71</code>. The default alarm ledger is [70,75,75,125]; repeated occurrences and escaped reserved literals are retained.</p><p>Public CI passes 20 tests on Python 3.11 and 3.13. These tests concern this public Python subset, not the private cross-runtime suite or historical formal/hardware results. Complete framing/patch behavior, normative EventID initialization, capacity overflow, physical timing, energy and power-loss durability are not established. See conformance/GAPS.md. No architectural advantage or novelty is claimed by this demo.</p><p>Public repository materials are released under CC BY 4.0 at the author's request. The original version DOI 10.5281/zenodo.23845298 remains the separate October 2026 documentation baseline; do not treat that archived ZIP as containing this runnable example.</p>",
+  "keywords": [
+    "Universal Binary Language",
+    "public-contract reference",
+    "binary encoding",
+    "state routing",
+    "event sourcing",
+    "software demonstration"
+  ],
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/saadmasoodalam/ubl-public",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23845298",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}
