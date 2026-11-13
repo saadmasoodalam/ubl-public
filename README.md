@@ -1,12 +1,13 @@
 # Universal Binary Language — Public Review
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23845298.svg)](https://doi.org/10.5281/zenodo.23845298)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23845297.svg)](https://doi.org/10.5281/zenodo.23845297)
 [![Public reference tests](https://github.com/saadmasoodalam/ubl-public/actions/workflows/public-conformance.yml/badge.svg?branch=main)](https://github.com/saadmasoodalam/ubl-public/actions/workflows/public-conformance.yml)
 
 **Author / Architect:** Saad Masood  
 **ORCID:** https://orcid.org/0009-0005-0796-7198  
 **Kernel baseline:** UBL Kernel v1.0.0  
 **Runnable archive snapshot:** public-reference-2026-11-14<br>
+**Runnable version DOI:** https://doi.org/10.5281/zenodo.24209493<br>
 **Original documentation release:** v1.0.0-review<br>
 **Original version DOI:** https://doi.org/10.5281/zenodo.23845298<br>
 **Concept DOI (all versions):** https://doi.org/10.5281/zenodo.23845297  
@@ -91,9 +92,13 @@ https://dadastore.co/research/papers/ubl-kernel-v1.html
 
 ## Citation
 
+For the runnable Python reference, cite:
+
+> Masood, Saad. *UBL Kernel v1.0 — Runnable Public-Contract Reference*. Version public-reference-2026-11-14, 2026. Zenodo. https://doi.org/10.5281/zenodo.24209493
+
 The live repository now includes an executable illustration. The archived DOI
-below identifies the original public-review baseline, not a claim that this
-new example or its current CI was included in that archive.
+below identifies the separate original public-review baseline, not a claim
+that the runnable example or its current CI was included in that older archive.
 
 For this exact archived public-review baseline, cite:
 
@@ -128,6 +133,7 @@ historical benchmark measurements described in the review documents.
 ## Downloaded archives and Zenodo
 
 After downloading and extracting a runnable source ZIP from
+[Zenodo record 24209493](https://zenodo.org/records/24209493) or
 [GitHub Releases](https://github.com/saadmasoodalam/ubl-public/releases), open a
 terminal in the extracted folder and run the same `python -m conformance.demo`
 and test commands above. Git is unnecessary for an extracted download.
@@ -136,9 +142,12 @@ Zenodo's GitHub integration archives published releases, not each push to
 `main`. The October record `23845298` contains six Markdown documents and no
 Python source; it remains a valid historical specification archive. The
 `public-reference-2026-11-14` snapshot adds runnable code without changing the
-frozen kernel. A later Zenodo version has its own version DOI; the concept DOI
-above identifies the version family. We do not overwrite the original archive
-or assign its DOI to the new files.
+frozen kernel. Its version DOI is `10.5281/zenodo.24209493`; the concept DOI
+above identifies the version family and resolves to the latest version. The
+actual Zenodo ZIP was downloaded: all 19 source/license/metadata/document files
+match release commit `4fc309d`, and all 20 tests plus the three examples pass
+after extraction without private imports. We do not overwrite the original
+archive or assign its DOI to the new files.
 
 [.zenodo.json](.zenodo.json) supplies release-specific archive metadata and
 takes precedence over CITATION.cff in Zenodo's GitHub integration. Public source
