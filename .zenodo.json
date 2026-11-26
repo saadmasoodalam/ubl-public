@@ -1,10 +1,10 @@
 {
-  "title": "UBL Kernel v1.0 — Runnable Public-Contract Reference",
-  "version": "public-reference-2026-11-14",
+  "title": "UBL Kernel v1.0 — Native Execution and Practical State-Routing Validation",
+  "version": "public-research-2026-11-27",
   "upload_type": "software",
   "access_right": "open",
   "license": "cc-by-4.0",
-  "publication_date": "2026-11-14",
+  "publication_date": "2026-11-27",
   "creators": [
     {
       "name": "Masood, Saad",
@@ -12,7 +12,7 @@
       "affiliation": "theDaDaist"
     }
   ],
-  "description": "<p>Runnable, independent Python illustration of the published Universal Binary Language Kernel v1.0 contract. This archive includes an editable synthetic temperature example, a raw-atom CLI, 20 standard-library tests, the frozen public contract and review documents. It is an archive update, not a new kernel version or a release of the private compiler/RTL.</p><p>Requires Python 3.11+ with no additional packages. After extracting the ZIP, open a terminal in its folder and run <code>python -m conformance.demo</code>. Run the tests with <code>python -m unittest discover -s conformance -p 'test_*.py' -v</code>. Change readings with <code>python -m conformance.demo --readings 69 70 71 --threshold 71</code>. The default alarm ledger is [70,75,75,125]; repeated occurrences and escaped reserved literals are retained.</p><p>Public CI passes 20 tests on Python 3.11 and 3.13. These tests concern this public Python subset, not the private cross-runtime suite or historical formal/hardware results. Complete framing/patch behavior, normative EventID initialization, capacity overflow, physical timing, energy and power-loss durability are not established. See conformance/GAPS.md. No architectural advantage or novelty is claimed by this demo.</p><p>Public repository materials are released under CC BY 4.0 at the author's request. The original version DOI 10.5281/zenodo.23845298 remains the separate October 2026 documentation baseline; do not treat that archived ZIP as containing this runnable example.</p>",
+  "description": "<p>Supplemental research update for the frozen Universal Binary Language (UBL) Kernel v1.0.0. Includes the existing independent public Python contract reference and temperature example, an additional editable two-state lifecycle illustration, public tests and a bounded native instruction-count research summary. Run python -m conformance.lifecycle and python -m unittest discover -s conformance -p 'test_*.py' -v with Python 3.11+ and no extra packages.</p><p>The report separates author-reported private native measurements from publicly runnable examples. It includes equal-contract original/optional/packed8 instruction counts, fixed inventory and code-size tradeoffs, and the dominant SHA-256 work. It does not establish architectural superiority, physical timing or energy, complete conformance, power-loss durability or novelty. The private implementation and raw profiles are withheld; the public illustration does not reproduce those measurements.</p><p>CC BY 4.0 applies only to this public archive. The previous November 14 runnable archive DOI 10.5281/zenodo.24209493 and original October archive DOI 10.5281/zenodo.23845298 remain distinct version records. No new kernel version.</p>",
   "keywords": [
     "Universal Binary Language",
     "public-contract reference",
@@ -30,6 +30,11 @@
     },
     {
       "identifier": "10.5281/zenodo.23845298",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.24209493",
       "relation": "isSupplementTo",
       "resource_type": "software"
     }

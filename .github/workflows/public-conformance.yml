@@ -28,4 +28,5 @@ jobs:
       - name: Run the public quick-start examples
         run: |
           python -m conformance.demo
+          python -m conformance.lifecycle
           python -m conformance.reference --atoms '21 22 ff 21'
