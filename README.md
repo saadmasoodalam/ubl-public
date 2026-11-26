@@ -11,7 +11,7 @@
 **Original documentation release:** v1.0.0-review<br>
 **Original version DOI:** https://doi.org/10.5281/zenodo.23845298<br>
 **Concept DOI (all versions):** https://doi.org/10.5281/zenodo.23845297  
-**Status:** Runnable public-contract reference and frozen-contract review material
+**Status:** Runnable public-contract reference and frozen-contract review material; November 27 supplemental research update prepared
 
 This repository contains a limited public review package for the **Universal Binary Language (UBL)** kernel. The primary implementation repository remains private.
 
@@ -74,6 +74,10 @@ hardware efficiency, physical persistence, or a general-purpose language runtime
 The model has an unbounded ledger and deliberately leaves unspecified framing
 and patch behavior unresolved. Its zero EventID seed and symbolic `None` reset
 value are explicit demonstration choices. See [limitations](conformance/GAPS.md).
+
+## November 27 research supplement
+
+[Native execution and practical state-routing validation](NATIVE-EXECUTION-RESEARCH.md) reports bounded native software results, including the original implementation, optional dispatcher and equal-contract packed8 comparison with code-size and wire-density tradeoffs. Private implementations and raw measurements are not included. The independent public lifecycle illustration is runnable with `python -m conformance.lifecycle`; its default alarm ledger is `[90, 91, 90, 91]`. It does not reproduce the native measurements. The previously archived version DOI above still identifies the November 14 ZIP; the supplement's version-specific DOI will be added only after verification.
 
 ## Public material
 

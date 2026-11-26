@@ -25,6 +25,8 @@ It does not disclose the private runtime, compiler, RTL, private vectors or
 unreleased mechanisms. Adding this example does not change the frozen contract
 or grant access to withheld material.
 
+The November 27 research supplement authorizes disclosure of its aggregate, bounded measurement summary and independent public lifecycle illustration only. It does not make the private compiler/runtime/RTL, raw measurements, unpublished algorithms or research fixtures public.
+
 ## Private / withheld
 
 The following are intentionally not included in this package:

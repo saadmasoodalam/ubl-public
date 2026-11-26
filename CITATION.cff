@@ -1,22 +1,20 @@
 cff-version: 1.2.0
-title: "UBL Kernel v1.0 — Runnable Public-Contract Reference"
-message: "If you use this public Python reference, cite this snapshot. README lists the separate archived documentation DOI."
+title: "UBL Kernel v1.0 — Native Execution and Practical State-Routing Validation"
+message: "Cite this supplemental public research snapshot. Use its verified Zenodo version DOI once issued; README identifies earlier immutable archives."
 type: software
 authors:
   - family-names: Masood
     given-names: Saad
     orcid: "https://orcid.org/0009-0005-0796-7198"
-version: "public-reference-2026-11-14"
-date-released: 2026-11-14
-doi: "10.5281/zenodo.24209493"
+version: "public-research-2026-11-27"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/saadmasoodalam/ubl-public"
 url: "https://github.com/saadmasoodalam/ubl-public"
 abstract: >-
-  Independent runnable Python subset of the published Universal Binary Language
-  Kernel v1.0 contract, with an editable example and 20 public tests. The kernel
-  is unchanged. Full private implementation, complete conformance and hardware
-  performance are outside this archive's scope.
+  Supplemental native execution research summary and independent runnable Python
+  reference with a lifecycle illustration. The frozen kernel is unchanged. Native
+  measurements are author-reported; private implementation and raw profiles are
+  not part of this archive. No physical performance advantage is claimed.
 keywords:
   - universal binary language
   - public-contract reference
